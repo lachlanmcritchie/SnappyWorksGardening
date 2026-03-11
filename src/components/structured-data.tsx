@@ -15,6 +15,7 @@ export function StructuredData() {
       addressRegion: "VIC",
       addressCountry: "AU",
     },
+    foundingDate: `${BUSINESS.yearFounded}`,
     openingHours: "Mo-Sa 07:00-18:00",
     areaServed: {
       "@type": "City",

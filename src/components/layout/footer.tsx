@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { PhoneCallIcon, MailIcon, MapPinHouseIcon } from "lucide-react"
-import { BUSINESS, SERVICES, NAV_LINKS } from "@/lib/constants"
+import { BUSINESS, SERVICES, SERVICE_AREAS } from "@/lib/constants"
+import { LogoWordmark } from "@/components/logo"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -8,17 +9,12 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-muted/50">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {/* Brand */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="flex size-8 items-center justify-center rounded-lg bg-primary">
-                <span className="text-sm font-bold text-primary-foreground">SW</span>
-              </div>
-              <span className="text-lg font-semibold tracking-tight">
-                {BUSINESS.name}
-              </span>
-            </div>
+          <div className="space-y-4 sm:col-span-2 md:col-span-3 lg:col-span-2">
+            <Link href="/" className="inline-flex">
+              <LogoWordmark />
+            </Link>
             <p className="text-sm leading-relaxed text-muted-foreground">
               Professional gardening and outdoor maintenance services for homes
               and businesses across Geelong and surrounding areas.
@@ -34,7 +30,7 @@ export function Footer() {
               {SERVICES.map((service) => (
                 <li key={service.slug}>
                   <Link
-                    href={`/services#${service.slug}`}
+                    href={`/services/${service.slug}`}
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {service.title}
@@ -47,33 +43,74 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="mb-3 text-sm font-semibold text-foreground">
-              Quick Links
+              Company
             </h3>
             <ul className="space-y-2">
-              {NAV_LINKS.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
               <li>
-                <Link
-                  href="/quote"
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
+                <Link href="/about" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/gallery" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  Our Work
+                </Link>
+              </li>
+              <li>
+                <Link href="/reviews" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  Reviews
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/quote" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                   Get a Quote
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Service Areas + Contact */}
           <div>
             <h3 className="mb-3 text-sm font-semibold text-foreground">
+              Service Areas
+            </h3>
+            <ul className="space-y-2">
+              {SERVICE_AREAS.slice(0, 6).map((area) => (
+                <li key={area.slug}>
+                  <Link
+                    href={`/areas/${area.slug}`}
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {area.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/areas"
+                  className="text-sm font-medium text-primary transition-colors hover:text-primary/80"
+                >
+                  View All Areas →
+                </Link>
+              </li>
+            </ul>
+
+            <h3 className="mb-3 mt-6 text-sm font-semibold text-foreground">
               Contact
             </h3>
             <ul className="space-y-3">

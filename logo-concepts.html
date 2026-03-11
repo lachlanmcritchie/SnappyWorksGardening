@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnappyWorks Gardening — Logo Concepts</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #f5f7f5;
+      color: #1a2e1a;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #2d6a4f;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #6b7b6b;
+      margin-bottom: 48px;
+      font-size: 0.9rem;
+    }
+
+    .concepts {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .concept {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
+      border: 1px solid #e8ede8;
+    }
+
+    .concept-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #eef2ee;
+    }
+
+    .concept-number {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #2d6a4f;
+      background: #e8f5e9;
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+
+    .concept-name {
+      font-size: 0.85rem;
+      color: #6b7b6b;
+      font-style: italic;
+    }
+
+    .logo-display {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      min-height: 120px;
+    }
+
+    .variant {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .variant-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9aa89a;
+      font-weight: 600;
+    }
+
+    .dark-bg {
+      background: #1a2e1a;
+      padding: 24px 32px;
+      border-radius: 12px;
+    }
+
+    /* ==================== CONCEPT 1: Leaf-dot on the i ==================== */
+
+    .c1-logo {
+      display: flex;
+      align-items: baseline;
+      gap: 0;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: #2d6a4f;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .c1-logo .snappy { color: #2d6a4f; }
+    .c1-logo .works { color: #4a8c6a; font-weight: 600; }
+    .c1-logo .garden {
+      position: relative;
+      display: inline-block;
+    }
+
+    .c1-logo .gardening-text {
+      color: #2d6a4f;
+    }
+
+    .c1-logo .i-special {
+      position: relative;
+      display: inline-block;
+    }
+
+    .c1-logo .i-special .dot-leaf {
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* Icon mark */
+    .c1-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==================== CONCEPT 2: SW Monogram with leaf ==================== */
+
+    .c2-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .c2-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .c2-text .top {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      color: #2d6a4f;
+      letter-spacing: -0.02em;
+    }
+
+    .c2-text .bottom {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      color: #5a9a7a;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* ==================== CONCEPT 3: Leaf underline ==================== */
+
+    .c3-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .c3-top {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 26px;
+      color: #2d6a4f;
+      letter-spacing: -0.02em;
+    }
+
+    .c3-top .works-part { color: #5a9a7a; font-weight: 600; }
+
+    .c3-bottom-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .c3-gardening {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      color: #6b8b6b;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    /* ==================== CONCEPT 4: Inline sprout from W ==================== */
+
+    .c4-logo {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: #2d6a4f;
+      letter-spacing: -0.01em;
+      position: relative;
+      display: inline-block;
+    }
+
+    .c4-logo .works-text { color: #4a8c6a; }
+    .c4-logo .gardening-sub {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #6b8b6b;
+      text-align: right;
+      margin-top: -2px;
+    }
+
+    .c4-w-wrap {
+      position: relative;
+      display: inline-block;
+    }
+
+    .c4-sprout {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* ==================== CONCEPT 5: Badge / Emblem ==================== */
+
+    .c5-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .c5-main {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: #2d6a4f;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .c5-divider {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 4px 0;
+    }
+
+    .c5-line {
+      width: 40px;
+      height: 1.5px;
+      background: #2d6a4f;
+      opacity: 0.3;
+    }
+
+    .c5-sub {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      color: #5a9a7a;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+<h1>SnappyWorks Gardening — Logo Concepts</h1>
+<p class="subtitle">5 directions incorporating the brand name creatively</p>
+
+<div class="concepts">
+
+  <!-- ==================== CONCEPT 1 ==================== -->
+  <div class="concept">
+    <div class="concept-header">
+      <span class="concept-number">Concept 1</span>
+      <span class="concept-name">"Leaf-dot i" — A leaf replaces the dot on the i in Gardening</span>
+    </div>
+    <div class="logo-display">
+      <div class="variant">
+        <span class="variant-label">Full Logo</span>
+        <div class="c1-logo">
+          <span class="snappy">Snappy</span><span class="works">Works</span>&nbsp;
+          <span class="garden">
+            <span class="gardening-text">Garden</span><span class="i-special" style="display:inline-block; position:relative;">
+              <svg width="8" height="30" viewBox="0 0 8 30" style="vertical-align: baseline; margin-bottom: -5px;">
+                <!-- leaf as dot -->
+                <path d="M4 2 C4 0, 7 1, 7 3 C7 5.5, 4 7, 4 7 C4 7, 1 5.5, 1 3 C1 1, 4 0, 4 2Z" fill="#4CAF50"/>
+                <!-- stem of i -->
+                <rect x="2.8" y="10" width="2.4" height="16" rx="1.2" fill="#2d6a4f"/>
+              </svg>
+            </span><span class="gardening-text">ng</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="variant">
+        <span class="variant-label">Icon Mark</span>
+        <div class="c1-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48">
+            <rect width="48" height="48" rx="12" fill="#2d6a4f"/>
+            <!-- S -->
+            <text x="12" y="32" font-family="Outfit, sans-serif" font-size="22" font-weight="800" fill="white">S</text>
+            <!-- W with leaf growing from middle peak -->
+            <text x="24" y="32" font-family="Outfit, sans-serif" font-size="22" font-weight="800" fill="white">W</text>
+            <!-- leaf sprouting from W -->
+            <path d="M33 14 C31 10, 33 6, 36 5 C36 9, 35 12, 33 14Z" fill="#81C784" opacity="0.95"/>
+            <path d="M33 14 C35 10, 33 6, 30 5 C30 9, 31 12, 33 14Z" fill="#66BB6A" opacity="0.8"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="variant">
+        <span class="variant-label">On Dark</span>
+        <div class="dark-bg">
+          <div class="c1-logo" style="color: white;">
+            <span style="color: #81C784;">Snappy</span><span style="color: #a5d6a7;">Works</span>&nbsp;
+            <span>
+              <span style="color: white;">Garden</span><span style="display:inline-block; position:relative;">
+                <svg width="8" height="30" viewBox="0 0 8 30" style="vertical-align: baseline; margin-bottom: -5px;">
+                  <path d="M4 2 C4 0, 7 1, 7 3 C7 5.5, 4 7, 4 7 C4 7, 1 5.5, 1 3 C1 1, 4 0, 4 2Z" fill="#81C784"/>
+                  <rect x="2.8" y="10" width="2.4" height="16" rx="1.2" fill="white"/>
+                </svg>
+              </span><span style="color: white;">ng</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CONCEPT 2 ==================== -->
+  <div class="concept">
+    <div class="concept-header">
+      <span class="concept-number">Concept 2</span>
+      <span class="concept-name">"SW Monogram" — Intertwined initials with leaf growing from the W</span>
+    </div>
+    <div class="logo-display">
+      <div class="variant">
+        <span class="variant-label">Full Logo</span>
+        <div class="c2-logo">
+          <svg width="52" height="52" viewBox="0 0 52 52">
+            <!-- Circle badge -->
+            <circle cx="26" cy="26" r="25" fill="none" stroke="#2d6a4f" stroke-width="2"/>
+            <!-- S letter -->
+            <text x="13" y="35" font-family="Outfit, sans-serif" font-size="26" font-weight="800" fill="#2d6a4f">S</text>
+            <!-- W letter, slightly overlapping -->
+            <text x="25" y="35" font-family="Outfit, sans-serif" font-size="26" font-weight="800" fill="#3a8a5c">W</text>
+            <!-- Leaf growing up from W's center peak -->
+            <path d="M34 13 Q30 6, 34 2 Q38 6, 34 13Z" fill="#4CAF50"/>
+            <path d="M34 13 Q38 8, 40 4 Q36 8, 34 13Z" fill="#66BB6A" opacity="0.7"/>
+            <!-- tiny stem -->
+            <line x1="34" y1="13" x2="34" y2="16" stroke="#2d6a4f" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <div class="c2-text">
+            <span class="top">SnappyWorks</span>
+            <span class="bottom">Gardening</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="variant">
+        <span class="variant-label">Icon Only</span>
+        <svg width="48" height="48" viewBox="0 0 52 52">
+          <circle cx="26" cy="26" r="25" fill="#2d6a4f"/>
+          <text x="13" y="35" font-family="Outfit, sans-serif" font-size="26" font-weight="800" fill="white">S</text>
+          <text x="25" y="35" font-family="Outfit, sans-serif" font-size="26" font-weight="800" fill="rgba(255,255,255,0.85)">W</text>
+          <path d="M34 13 Q30 6, 34 2 Q38 6, 34 13Z" fill="#81C784"/>
+          <path d="M34 13 Q38 8, 40 4 Q36 8, 34 13Z" fill="#a5d6a7" opacity="0.7"/>
+          <line x1="34" y1="13" x2="34" y2="16" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="variant">
+        <span class="variant-label">On Dark</span>
+        <div class="dark-bg">
+          <div class="c2-logo">
+            <svg width="52" height="52" viewBox="0 0 52 52">
+              <circle cx="26" cy="26" r="25" fill="none" stroke="#81C784" stroke-width="2"/>
+              <text x="13" y="35" font-family="Outfit, sans-serif" font-size="26" font-weight="800" fill="white">S</text>
+              <text x="25" y="35" font-family="Outfit, sans-serif" font-size="26" font-weight="800" fill="#a5d6a7">W</text>
+              <path d="M34 13 Q30 6, 34 2 Q38 6, 34 13Z" fill="#81C784"/>
+              <path d="M34 13 Q38 8, 40 4 Q36 8, 34 13Z" fill="#a5d6a7" opacity="0.7"/>
+              <line x1="34" y1="13" x2="34" y2="16" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <div class="c2-text">
+              <span class="top" style="color: white;">SnappyWorks</span>
+              <span class="bottom" style="color: #a5d6a7;">Gardening</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CONCEPT 3 ==================== -->
+  <div class="concept">
+    <div class="concept-header">
+      <span class="concept-number">Concept 3</span>
+      <span class="concept-name">"Vine Underline" — A leafy vine curves beneath SnappyWorks as a natural divider</span>
+    </div>
+    <div class="logo-display">
+      <div class="variant">
+        <span class="variant-label">Full Logo</span>
+        <div class="c3-logo">
+          <div class="c3-top">
+            Snappy<span class="works-part">Works</span>
+          </div>
+          <svg width="220" height="18" viewBox="0 0 220 18" style="margin: -2px 0 2px;">
+            <!-- Vine curve -->
+            <path d="M10 9 Q55 16, 110 9 Q165 2, 210 9" fill="none" stroke="#4CAF50" stroke-width="1.8" stroke-linecap="round"/>
+            <!-- Small leaves along the vine -->
+            <path d="M45 12 Q42 8, 46 7 Q48 10, 45 12Z" fill="#66BB6A"/>
+            <path d="M90 7 Q87 3, 91 2 Q93 5, 90 7Z" fill="#4CAF50"/>
+            <path d="M135 11 Q132 7, 136 6 Q138 9, 135 11Z" fill="#66BB6A"/>
+            <path d="M175 8 Q172 4, 176 3 Q178 6, 175 8Z" fill="#4CAF50" opacity="0.8"/>
+          </svg>
+          <div class="c3-gardening">Gardening</div>
+        </div>
+      </div>
+
+      <div class="variant">
+        <span class="variant-label">Compact</span>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="36" height="36" viewBox="0 0 36 36">
+            <rect width="36" height="36" rx="8" fill="#2d6a4f"/>
+            <text x="18" y="23" font-family="Outfit, sans-serif" font-size="13" font-weight="800" fill="white" text-anchor="middle">SW</text>
+            <!-- vine underline -->
+            <path d="M8 28 Q18 24, 28 28" fill="none" stroke="#81C784" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M17 25 Q15.5 23, 17.5 22.5 Q18.5 24, 17 25Z" fill="#a5d6a7"/>
+          </svg>
+          <div style="display: flex; flex-direction: column; line-height: 1.15;">
+            <span style="font-family: Outfit, sans-serif; font-weight: 700; font-size: 18px; color: #2d6a4f;">SnappyWorks</span>
+            <span style="font-family: Outfit, sans-serif; font-weight: 500; font-size: 9px; color: #6b8b6b; letter-spacing: 0.2em; text-transform: uppercase;">Gardening</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="variant">
+        <span class="variant-label">On Dark</span>
+        <div class="dark-bg">
+          <div class="c3-logo">
+            <div class="c3-top" style="color: white;">
+              Snappy<span style="color: #a5d6a7;">Works</span>
+            </div>
+            <svg width="220" height="18" viewBox="0 0 220 18">
+              <path d="M10 9 Q55 16, 110 9 Q165 2, 210 9" fill="none" stroke="#81C784" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M45 12 Q42 8, 46 7 Q48 10, 45 12Z" fill="#a5d6a7"/>
+              <path d="M90 7 Q87 3, 91 2 Q93 5, 90 7Z" fill="#81C784"/>
+              <path d="M135 11 Q132 7, 136 6 Q138 9, 135 11Z" fill="#a5d6a7"/>
+              <path d="M175 8 Q172 4, 176 3 Q178 6, 175 8Z" fill="#81C784" opacity="0.8"/>
+            </svg>
+            <div class="c3-gardening" style="color: #a5d6a7;">Gardening</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CONCEPT 4 ==================== -->
+  <div class="concept">
+    <div class="concept-header">
+      <span class="concept-number">Concept 4</span>
+      <span class="concept-name">"Growing W" — A sprout grows from the centre peak of the W in Works</span>
+    </div>
+    <div class="logo-display">
+      <div class="variant">
+        <span class="variant-label">Full Logo</span>
+        <div class="c4-logo">
+          Snappy<span class="c4-w-wrap">W<svg class="c4-sprout" width="14" height="16" viewBox="0 0 14 16">
+            <!-- stem -->
+            <line x1="7" y1="16" x2="7" y2="6" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- two leaves -->
+            <path d="M7 8 Q3 4, 5 1 Q8 4, 7 8Z" fill="#4CAF50"/>
+            <path d="M7 10 Q11 7, 10 4 Q8 7, 7 10Z" fill="#66BB6A" opacity="0.85"/>
+          </svg></span><span class="works-text">orks</span>
+          <span class="gardening-sub">Gardening</span>
+        </div>
+      </div>
+
+      <div class="variant">
+        <span class="variant-label">Icon Mark</span>
+        <svg width="48" height="48" viewBox="0 0 48 48">
+          <rect width="48" height="48" rx="12" fill="#2d6a4f"/>
+          <!-- W shape -->
+          <text x="24" y="36" font-family="Outfit, sans-serif" font-size="30" font-weight="800" fill="white" text-anchor="middle">W</text>
+          <!-- sprout from center peak -->
+          <line x1="24" y1="16" x2="24" y2="8" stroke="#81C784" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M24 10 Q20 5, 22 2 Q25 5, 24 10Z" fill="#81C784"/>
+          <path d="M24 12 Q28 8, 27 5 Q25 8, 24 12Z" fill="#a5d6a7" opacity="0.8"/>
+        </svg>
+      </div>
+
+      <div class="variant">
+        <span class="variant-label">On Dark</span>
+        <div class="dark-bg">
+          <div class="c4-logo" style="color: white;">
+            Snappy<span class="c4-w-wrap" style="color: #a5d6a7;">W<svg class="c4-sprout" width="14" height="16" viewBox="0 0 14 16">
+              <line x1="7" y1="16" x2="7" y2="6" stroke="#81C784" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M7 8 Q3 4, 5 1 Q8 4, 7 8Z" fill="#81C784"/>
+              <path d="M7 10 Q11 7, 10 4 Q8 7, 7 10Z" fill="#a5d6a7" opacity="0.85"/>
+            </svg></span><span style="color: #a5d6a7;">orks</span>
+            <span class="gardening-sub" style="color: #81C784;">Gardening</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CONCEPT 5 ==================== -->
+  <div class="concept">
+    <div class="concept-header">
+      <span class="concept-number">Concept 5</span>
+      <span class="concept-name">"Garden Badge" — Leaf flanked emblem with the full name stacked</span>
+    </div>
+    <div class="logo-display">
+      <div class="variant">
+        <span class="variant-label">Full Logo</span>
+        <div class="c5-badge">
+          <div class="c5-main">SnappyWorks</div>
+          <div class="c5-divider">
+            <span class="c5-line"></span>
+            <svg width="18" height="18" viewBox="0 0 18 18">
+              <!-- central leaf -->
+              <path d="M9 16 L9 8" stroke="#4CAF50" stroke-width="1.3" stroke-linecap="round"/>
+              <path d="M9 9 Q5 4, 7 1 Q10 4, 9 9Z" fill="#4CAF50"/>
+              <path d="M9 11 Q13 7, 12 4 Q10 7, 9 11Z" fill="#66BB6A" opacity="0.8"/>
+            </svg>
+            <span class="c5-line"></span>
+          </div>
+          <div class="c5-sub">Gardening</div>
+        </div>
+      </div>
+
+      <div class="variant">
+        <span class="variant-label">Horizontal</span>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <svg width="40" height="40" viewBox="0 0 40 40">
+            <rect width="40" height="40" rx="10" fill="#2d6a4f"/>
+            <!-- Leaf icon -->
+            <path d="M20 32 L20 18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <path d="M20 20 Q14 12, 17 6 Q22 12, 20 20Z" fill="white"/>
+            <path d="M20 24 Q26 18, 25 12 Q22 18, 20 24Z" fill="white" opacity="0.75"/>
+          </svg>
+          <div style="display: flex; flex-direction: column; line-height: 1.1;">
+            <span style="font-family: Outfit, sans-serif; font-weight: 800; font-size: 20px; color: #2d6a4f; letter-spacing: 0.02em;">SNAPPYWORKS</span>
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span style="width: 100%; height: 1px; background: #c8d8c8;"></span>
+              <span style="font-family: Outfit, sans-serif; font-weight: 500; font-size: 10px; color: #5a9a7a; letter-spacing: 0.3em; white-space: nowrap;">GARDENING</span>
+              <span style="width: 100%; height: 1px; background: #c8d8c8;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="variant">
+        <span class="variant-label">On Dark</span>
+        <div class="dark-bg">
+          <div class="c5-badge">
+            <div class="c5-main" style="color: white;">SnappyWorks</div>
+            <div class="c5-divider">
+              <span class="c5-line" style="background: rgba(255,255,255,0.3);"></span>
+              <svg width="18" height="18" viewBox="0 0 18 18">
+                <path d="M9 16 L9 8" stroke="#81C784" stroke-width="1.3" stroke-linecap="round"/>
+                <path d="M9 9 Q5 4, 7 1 Q10 4, 9 9Z" fill="#81C784"/>
+                <path d="M9 11 Q13 7, 12 4 Q10 7, 9 11Z" fill="#a5d6a7" opacity="0.8"/>
+              </svg>
+              <span class="c5-line" style="background: rgba(255,255,255,0.3);"></span>
+            </div>
+            <div class="c5-sub" style="color: #a5d6a7;">Gardening</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<p style="text-align: center; margin-top: 48px; color: #9aa89a; font-size: 0.8rem;">
+  Each concept includes: full wordmark, compact icon mark, and dark background variant.
+</p>
+
+</body>
+</html>

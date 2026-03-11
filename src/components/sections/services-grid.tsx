@@ -23,13 +23,13 @@ export function ServicesGrid() {
         </div>
 
         {/* Grid */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {SERVICES.map((service) => {
             const Icon = service.icon
             return (
               <Link
                 key={service.slug}
-                href={`/services#${service.slug}`}
+                href={`/services/${service.slug}`}
                 className="group relative flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
               >
                 {/* Image */}

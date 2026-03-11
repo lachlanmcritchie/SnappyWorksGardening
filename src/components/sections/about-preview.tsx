@@ -1,7 +1,6 @@
 import Image from "next/image"
 import { ArrowRightIcon, CircleCheckBig } from "lucide-react"
 import { LinkButton } from "@/components/ui/link-button"
-import { STATS } from "@/lib/constants"
 
 export function AboutPreview() {
   return (
@@ -11,7 +10,7 @@ export function AboutPreview() {
           {/* Image */}
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
             <Image
-              src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&q=80"
+              src="https://images.unsplash.com/photo-1759497860802-9cba5782b455?w=800&q=80"
               alt="Professional gardener maintaining a beautiful lawn"
               fill
               className="object-cover"
@@ -29,17 +28,18 @@ export function AboutPreview() {
               Geelong&apos;s Trusted Garden Care Professionals
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              SnappyWorks Gardening was founded with a simple mission: to deliver
-              reliable, high-quality garden care that Geelong homeowners can
-              count on. We treat every property like it&apos;s our own.
+              We built SnappyWorks Gardening on a simple promise: deliver
+              reliable, high-quality garden care with honest pricing and
+              genuine attention to detail. Every property we work on gets
+              the same level of care — because your garden deserves nothing less.
             </p>
 
             <ul className="mt-6 space-y-3">
               {[
                 "Fully insured and locally owned",
-                "Experienced, friendly team",
+                "Residential and commercial services",
                 "Consistent results, every visit",
-                "Flexible scheduling to suit you",
+                "Same-day quotes and flexible scheduling",
               ].map((item) => (
                 <li
                   key={item}
@@ -56,16 +56,6 @@ export function AboutPreview() {
               <ArrowRightIcon className="ml-1 size-4" />
             </LinkButton>
           </div>
-        </div>
-
-        {/* Stats Bar */}
-        <div className="mt-16 grid grid-cols-2 gap-6 rounded-2xl border border-border bg-card p-6 sm:p-8 lg:grid-cols-4">
-          {STATS.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p className="text-3xl font-bold text-primary">{stat.value}</p>
-              <p className="mt-1 text-sm text-muted-foreground">{stat.label}</p>
-            </div>
-          ))}
         </div>
       </div>
     </section>

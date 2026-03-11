@@ -44,9 +44,9 @@ export function HowItWorks() {
         </div>
 
         {/* Steps */}
-        <div className="relative mt-14 grid gap-8 sm:grid-cols-3">
+        <div className="relative mt-14 grid gap-8 md:grid-cols-3">
           {/* Connecting line (desktop only) */}
-          <div className="pointer-events-none absolute top-14 right-[calc(16.67%+1rem)] left-[calc(16.67%+1rem)] hidden h-0.5 bg-border sm:block" />
+          <div className="pointer-events-none absolute top-14 right-[calc(16.67%+1rem)] left-[calc(16.67%+1rem)] hidden h-0.5 bg-border md:block" />
 
           {steps.map((step) => {
             const Icon = step.icon

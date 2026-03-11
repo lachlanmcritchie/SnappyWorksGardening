@@ -1,8 +1,5 @@
-import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
-import { Navbar } from "@/components/layout/navbar"
-import { Footer } from "@/components/layout/footer"
-import { StructuredData } from "@/components/structured-data"
+import type { Metadata, Viewport } from "next"
+import { Geist, Geist_Mono, Outfit } from "next/font/google"
 import "./globals.css"
 
 const geistSans = Geist({
@@ -14,6 +11,18 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 })
+
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
+  weight: ["500", "800"],
+})
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://snappyworkgardening.com.au"),
@@ -30,6 +39,11 @@ export const metadata: Metadata = {
     "pressure cleaning Geelong",
     "garden maintenance Geelong",
     "landscaping Geelong",
+    "edging Geelong",
+    "mulching Geelong",
+    "rubbish removal Geelong",
+    "garden tidy Geelong",
+    "lawn care Geelong",
   ],
   alternates: {
     canonical: "/",
@@ -63,12 +77,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} antialiased`}
       >
-        <StructuredData />
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   )
